@@ -20,9 +20,9 @@ internal class Program
         endResults = td.DiceThrower(numRolls);
 
         //generate result text
-        System.Console.WriteLine("DICE ROLLING SIMULATION RESULTS\n" +
+        System.Console.WriteLine("\nDICE ROLLING SIMULATION RESULTS\n" +
             "Each \"*\" represents 1% of the total number of rolls.\n" +
-            "Total number of rolls = " + numRolls);
+            "Total number of rolls = " + numRolls + ".\n");
 
         //loop for histogram
         for (int iCount = 0; iCount < endResults.Length; iCount++)
@@ -48,6 +48,6 @@ internal class Program
             System.Console.WriteLine((iCount + 2) + ": " + histogramStars);
         }
 
-        System.Console.WriteLine("\n\nThank you for using the dice throwing simulator. Goodbye!");
+        System.Console.WriteLine("\nThank you for using the dice throwing simulator. Goodbye!");
     }
 }
