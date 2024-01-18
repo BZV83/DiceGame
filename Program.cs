@@ -13,8 +13,8 @@ internal class Program
         System.Console.WriteLine("Welcome to the dice throwing simulator!\n\n" +
             "How many dice rolls would you like to simulate?");
 
-        //obtain roll number
-        numRolls = Convert.ToInt32(System.Console.ReadLine());
+        //obtain roll number as converted to integer
+        numRolls = int.Parse(System.Console.ReadLine());
 
         //get roll results array
         endResults = td.DiceThrower(numRolls);
@@ -27,15 +27,14 @@ internal class Program
         //loop for histogram
         for (int iCount = 0; iCount < endResults.Length; iCount++)
         {
-            //initiate stars string and percentage calculation
+            //initiate stars string
             string histogramStars = "";
-            float percentage;
 
             //declare variable that can house each position result in the output array
             int rollResults = endResults[iCount];
 
             //calculate percentage and change back to integer
-            percentage = ((float)rollResults / (float)numRolls) * 100;
+            float percentage = ((float)rollResults / (float)numRolls) * 100;
             percentage = (int)percentage;
 
             //gather stars based on percentage of 100

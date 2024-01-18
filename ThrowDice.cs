@@ -14,11 +14,11 @@ namespace moreC_Fun
 
         public int[] DiceThrower(int numThrows)
         {
-            //first position is meant to represent 2
+            //Each position in array represents potential rolled number starting at 2 and ending at 12
             int[] outputArray = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
             //loop through and get dice rolls based on number of throws
-            for (int i = 0; i < numThrows; i++)
+            for (int iCount = 0; iCount < numThrows; iCount++)
             {
                 int d1 = rand.Next(1, 7);
                 int d2 = rand.Next(1, 7);
@@ -26,7 +26,7 @@ namespace moreC_Fun
                 int combinedDie = d1 + d2;
 
                 //increment position in the array where correct combinedDie number lives
-                //also adjust position by 2 to incorporate 0 based
+                //also adjust position by 2 to incorporate 0 based outputArray
                 outputArray[combinedDie - 2] = outputArray[combinedDie - 2] + 1;
             }
 
